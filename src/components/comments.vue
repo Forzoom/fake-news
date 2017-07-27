@@ -16,7 +16,7 @@
 </template>
 
 <script>
-    import Comment from 'components/comment';
+    import Comment from './comment.vue';
     /**
      * sendTime 图文消息发送时间的时间戳
      * comments 评论内容

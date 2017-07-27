@@ -1,8 +1,8 @@
 {
   "name": "@forzoom/fake-news",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "dist/fake-news.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./build/webpack.config.prod.js"
@@ -17,5 +17,8 @@
     "vue": "^2.4.2",
     "vue-loader": "^13.0.2",
     "vue-template-compiler": "^2.4.2"
+  },
+  "dependencies": {
+    "@forzoom/touch": "0.0.9"
   }
 }

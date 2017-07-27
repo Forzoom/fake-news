@@ -11,6 +11,9 @@ module.exports = {
 		library: 'fake-news',
 		libraryTarget: 'umd',
 	},
+	externals: {
+		vue: 'vue',
+	},
 	module: {
 		rules: [
 			{
@@ -20,6 +23,13 @@ module.exports = {
 			}, {
 				test: /\.js$/,
 				loader: 'babel-loader',
+				include: [path.resolve(__dirname, '../src')]
+			}, {
+				test: /\.css$/,
+				loader: [
+					'style-loader',
+					'css-loader',
+				],
 				include: [path.resolve(__dirname, '../src')]
 			}
 		]

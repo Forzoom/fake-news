@@ -34,10 +34,10 @@
     import {
         now,
         toTimestamp,
-    } from 'utils/date.js';
+    } from '../utils/date.js';
     import {
         increasing,
-    } from 'utils/filter';
+    } from '../utils/filter';
     export default {
         props: {
             name: String,
