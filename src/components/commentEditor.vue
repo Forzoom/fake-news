@@ -506,10 +506,11 @@
                 });
             },
             finish() {
-                this.isRequesting = false;
-                this.toastVisible = true;
+                const vm = this;
+                vm.isRequesting = false;
+                vm.toastVisible = true;
                 setTimeout(function() {
-                    this.toastVisible = false;
+                    vm.toastVisible = false;
                 }, 1000);
             },
         },
