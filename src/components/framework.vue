@@ -10,7 +10,12 @@
                         <span id="copyright_logo" class="rich_media_meta meta_original_tag">原创</span>
                         <em id="post-date" class="rich_media_meta rich_media_meta_text">{{createdAt}}</em>
                         <em class="rich_media_meta rich_media_meta_text">{{author}}</em>
-                        <a class="rich_media_meta rich_media_meta_link rich_media_meta_nickname" href="javascript:;" id="post-user">{{gh}}</a>
+                        <router-link
+                            :to="ghLink || ''"
+                            class="rich_media_meta rich_media_meta_link rich_media_meta_nickname"
+                            id="post-user">
+                            {{gh}}
+                        </router-link>
                         <span class="rich_media_meta rich_media_meta_text rich_media_meta_nickname">{{gh}}</span>
                         <div id="js_profile_qrcode" class="profile_container" style="display:none;">
                             <div class="profile_inner">
@@ -129,6 +134,11 @@ export default {
             required: true,
             type: Number,
         },
+        // 公众号引导关注页面
+        ghLink: {
+            type: String,
+        },
+        // editor的链接
         to: {
             required: true,
             type: String,

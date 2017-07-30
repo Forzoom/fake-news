@@ -8,3 +8,7 @@
 #### 0.0.4
 
 1. 修复commentEditor中的this错误
+
+#### 0.0.6
+
+1. 添加ghLink，传入的内容将作为to传递给router-link
