@@ -3,6 +3,7 @@ import Comments from './components/comments.vue';
 import EmotionPanel from './components/emotionPanel.vue';
 import Framework from './components/framework.vue';
 import CommentEditor from './components/commentEditor.vue';
+import Subscribe from './components/subscribe.vue';
 import css1 from './lib/style/framework.css';
 import css2 from './lib/style/emotionPanel.css';
 
@@ -20,4 +21,5 @@ export function install(Vue) {
     Vue.component('EmotionPanel', EmotionPanel);
     Vue.component('Framework', Framework);
     Vue.component('CommentEditor', CommentEditor);
+    Vue.component('Subscribe', Subscribe);
 }
