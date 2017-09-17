@@ -17,7 +17,7 @@
         <div class="discuss_message" v-if="willShow(this.createdAt)">
             <span class="discuss_status"></span>
             <div class="discuss_message_content">
-                <CommentContent :content="response.content"></CommentContent>
+                <CommentContent :content="content"></CommentContent>
             </div>
         </div>
         <p class="discuss_extra_info" v-if="willShow(this.createdAt)">{{createdAt * 1000 + sendTime | betterCreatedAt}}</p>

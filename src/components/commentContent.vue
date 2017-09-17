@@ -62,7 +62,7 @@
                     const lastChunk = chunk.length > 0 ? chunk[chunk.length - 1] : null;
                     // 最后一个chunk存在，并且类型是text的情况下合并到最后一个chunk
                     if (lastChunk && lastChunk.type === 'text') {
-                        lastChunk.value = lastChunk.value + this.content.slice(test);
+                        lastChunk.value = lastChunk.value + test;
                     } else {
                         chunk.push({
                             type: 'text',
@@ -72,6 +72,8 @@
                     i = rightBracket + 1;
                 }
             }
+
+            console.log(chunk);
 
             // 所有的元素
             const el = [];
