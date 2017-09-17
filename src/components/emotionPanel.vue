@@ -16,12 +16,11 @@
                     <li v-for="e in emotion" 
                         :class="['emotion_item', 'js_emotion_item', {del: e === -1}]" 
                         :style="{width: emotionSize, height: emotionSize}"
-                        @click="onClickEmotion(e)"
-                    >
+                        @click="onClickEmotion(e)">
                         <i v-if="e !== -1"
                             :class="['icon_emotion', 'icon' + e]" 
-                            :style="{'background-position': '0px ' + (e * -22) + 'px'}"
-                        ></i>
+                            :style="{'background-position': '0px ' + (e * -22) + 'px'}">
+                        </i>
                         <i v-else
                             class="icon_emotion del"
                         ></i>
@@ -30,7 +29,6 @@
             </div>
         </Touch>
         <ul class="emotion_navs" id="js_navbar">
-            <!--<li class="emotion_nav"></li>-->
             <li v-for="i in panelCount" :class="['emotion_nav', {current: i === currentPanel}]"></li>
         </ul>
     </div>
