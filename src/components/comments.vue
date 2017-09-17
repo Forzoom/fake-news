@@ -10,6 +10,7 @@
                 :created-at="comment.createdAt"
                 :response="comment.response"
                 :send-time="sendTime"
+                :lazy="lazy"
             ></Comment>
         </div>
     </div>
@@ -23,16 +24,30 @@
      */
     export default {
         name: 'Comments',
+        components: {
+            Comment,
+        },
         props: {
+            /**
+             * 所有的评论内容
+             */
             comments: {
                 type: Array,
+                default: [],
             },
+            /**
+             * 发送时间
+             */
             sendTime: {
                 type: Number,
             },
-        },
-        components: {
-            Comment,
+            /**
+             * 是否允许使用lazyload，为true的情况下，评论头像内容将使用vue-lazyload延迟加载
+             */
+            lazy: {
+                type: Boolean,
+                default: false,
+            },
         },
     };
 </script>
