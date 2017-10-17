@@ -40,6 +40,7 @@
                         <slot name="content"></slot>
                     </div>
                     <div class="rich_media_tool" id="js_toobar3">
+                        <a v-if="showReadOriginNews" class="media_tool_meta meta_primary" id="js_view_source" :href="originNews">阅读原文</a>
                         <div id="js_read_area3" class="media_tool_meta tips_global meta_primary" style="display: block;">阅读 <span id="readNum3">{{readCount | increasing(sendTime, 3600) | betterReadCount}}</span>
                         </div>
                         <span style="display: inline;" :class="['media_tool_meta', 'meta_primary', 'tips_global', 'meta_praise', {praised: thumbUp}]" id="like3" like="0" @click="onClickThumbUp">
@@ -142,6 +143,16 @@ export default {
         to: {
             required: true,
             type: String,
+        },
+        // 是否显示阅读原文
+        showReadOriginNews: {
+            type: Boolean,
+            default: false,
+        },
+        // 原文链接
+        originNews: {
+            type: String,
+            default: 'javascript:;'
         },
     },
     data() {
